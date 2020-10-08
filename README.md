@@ -25,17 +25,10 @@ conda activate jupyter_env && cd /home/jovyan/work/
 
 Afterwards, re-create the `.ipynb` notebook(s) with:
 ```bash
-mkdir ./notebooks && mkdir ./py && jupytext --set-formats notebooks///ipynb,md///md,py///_/.py
-```
-
-Jupytext should automatically pick up the jupytext.toml configuration. 
-If not, to sync notebooks (`./notebooks/`) automatically with markdown files (`./md/`) 
-and python files (`./py/`), use:
-```bash
-jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync notebooks/01_preparations.ipynb
-jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync notebooks/02_yfcc_gridagg_raw.ipynb
-jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync notebooks/03_yfcc_gridagg_hll.ipynb
-jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync notebooks/04_interpretation.ipynb
+jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/01_preparations.md
+jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/02_yfcc_gridagg_raw.md
+jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/03_yfcc_gridagg_hll.md
+jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/04_interpretation.md
 ```
 
 ## Releases
