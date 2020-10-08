@@ -1360,8 +1360,21 @@ db_connection.close ()
     --ExtractOutputPreprocessor.enabled=False # create single output file
 ```
 
-```python
+# Create release file
 
+Create a release file that contains ipynb notebooks, HTML, figures and python converted files, and the benchmark data (`yfcc_all_est_benchmark.csv`).
+
+Check that 7z is available (`apt-get install p7zip-full`)
+
+```python tags=["active-ipynb"]
+!cd .. && 7z a -tzip out/release_v0.1.0.zip \
+    md/* py/* out/html/* out/figures/* notebooks/01_preparations.ipynb \
+    notebooks/02_yfcc_gridagg_raw.ipynb \
+    notebooks/03_yfcc_gridagg_hll.ipynb \
+    notebooks/04_interpretation.ipynb \
+    README.md jupytext.toml nbconvert.tpl \
+    out/csv/yfcc_all_est_benchmark.csv \
+    -x!py/__pycache__ -x!py/modules/__pycache__ -x!py/modules/.ipynb_checkpoints
 ```
 
 ```python
