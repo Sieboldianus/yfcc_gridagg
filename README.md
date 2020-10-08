@@ -25,6 +25,7 @@ conda activate jupyter_env && cd /home/jovyan/work/
 
 Afterwards, re-create the `.ipynb` notebook(s) with:
 ```bash
+mkdir notebooks
 jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/01_preparations.md
 jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/02_yfcc_gridagg_raw.md
 jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/03_yfcc_gridagg_hll.md
