@@ -964,7 +964,8 @@ To create a new grid and load aggregate counts from CSV:
 ```python tags=["active-ipynb"]
 grid = grid_agg_fromcsv(
     OUTPUT / "csv" / "yfcc_all_est.csv",
-    columns=["xbin", "ybin", "postcount_est", "usercount_est", "userdays_est"])
+    columns=["xbin", "ybin"],
+    metrics=["postcount_est", "usercount_est", "userdays_est"])
 ```
 
 ## Load & plot pickled dataframe
