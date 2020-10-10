@@ -334,19 +334,20 @@ import numpy as np
 import warnings
 import matplotlib.pyplot as plt
 from IPython.display import display, clear_output
-# Load helper module from ../py/module/tools.py
-# this also allows to import code from other
-# jupyter notebooks, synced to *.py with jupytext
-module_path = os.path.abspath(os.path.join('..'))
+```
+
+Load helper module from ../py/module/tools.py. This also allows to import code from other jupyter notebooks, synced to *.py with jupytext.
+
+```python
+module_path = str(Path.cwd().parents[0] / "py")
 if module_path not in sys.path:
-    sys.path.append(module_path+"/py")
+    sys.path.append(module_path)
 from modules import tools, preparations
 ```
 
-Initialize Bokeh and shapely.speedups. Set pandas colwidth.
+Set pandas colwidth.
 
 ```python
-preparations.init_imports()
 pd.set_option('display.max_colwidth', 25)
 ```
 
@@ -709,6 +710,9 @@ OPTIONS (SET fetch_size '50000');
 We're going to use `spatial.latlng` from the [HLL Structure](https://gitlab.vgiscience.de/lbsn/structure/hlldb/-/blob/master/structure/98-create-tables.sql#L160) 
 definition. The structure for this table is already available,
 by default, in hlldb.
+
+
+Create table structure:
 
 ```python
 sql_query = """
