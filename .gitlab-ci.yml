@@ -1,4 +1,4 @@
-badge:
+build:
   image: registry.gitlab.vgiscience.org/tud_ifk/miniconda-cidefault
   before_script:
       # initialize conda shell
@@ -7,7 +7,7 @@ badge:
       # activate default ci_env from registry image
       # contains anybadge
       - conda activate ci_env
-  stage: badge
+  stage: build
   script:
       # create badges with version from latest tag
     - version_var=$(git tag | grep -E 'v[0-9].[0-9].[0-9]' | tail -n 1 | cut -c2-)
