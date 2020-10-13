@@ -1377,7 +1377,8 @@ Check that 7z is available (`apt-get install p7zip-full`)
     notebooks/04_interpretation.ipynb \
     README.md jupytext.toml nbconvert.tpl \
     out/csv/yfcc_all_est_benchmark.csv \
-    -x!py/__pycache__ -x!py/modules/__pycache__ -x!py/modules/.ipynb_checkpoints
+    -x!py/__pycache__ -x!py/modules/__pycache__ -x!py/modules/.ipynb_checkpoints \
+    -y > /dev/null
 ```
 
 ```python
