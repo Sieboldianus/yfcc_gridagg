@@ -45,4 +45,3 @@ jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/04_interpr
 [static-gh-url]: https://github.com/Sieboldianus/yfcc_gridagg
 [static-gl-url]: https://gitlab.vgiscience.de/ad/yfcc_gridagg
 [DOI]: http://dx.doi.org/10.25532/OPARA-90
-[pipeline]: 
