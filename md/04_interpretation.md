@@ -702,7 +702,7 @@ Use `union_all` function from `03_yfcc_gridagg_hll.ipynb`, but modify to union a
 
 ```python
 def union_all_hll(
-    hll_series: pd.Series, cardinality: bool = True) -> pd.Series:
+    hll_series: pd.Series, cardinality: bool = True, db_conn = None) -> pd.Series:
     """HLL Union and (optional) cardinality estimation from series of hll sets
 
         Args:
@@ -748,7 +748,8 @@ distinct_users_total = {}
 for country, grid_sel in grid_sel.items():
     # drop bins with no values
     cardinality_series = union_all_hll(
-        grid_sel["usercount_hll"].dropna())
+        grid_sel["usercount_hll"].dropna(),
+        db_conn=db_conn)
     distinct_users_total[country] = cardinality_series[0]
     print(
         f"{distinct_users_total[country]} distinct users "
@@ -787,7 +788,8 @@ grid_sel = {
 distinct_common = {}
 for country_tuple, grid_sel in grid_sel.items():
     cardinality_series = union_all_hll(
-        grid_sel["usercount_hll"].dropna())
+        grid_sel["usercount_hll"].dropna(),
+        db_conn=db_conn)
     distinct_common[country_tuple] = cardinality_series[0]
     print(
         f"{distinct_common[country_tuple]} distinct total users "
@@ -825,7 +827,8 @@ Calculate distinct users of all three countries:
 union_de_fr_uk = pd.concat(
     [grid_de, grid_fr, grid_uk])
 cardinality_series = union_all_hll(
-    union_de_fr_uk["usercount_hll"].dropna())
+    union_de_fr_uk["usercount_hll"].dropna(),
+    db_conn=db_conn)
 union_count_all = cardinality_series[0]
 union_count_all
 ```
@@ -1367,7 +1370,7 @@ Create a release file that contains ipynb notebooks, HTML, figures and python co
 Check that 7z is available (`apt-get install p7zip-full`)
 
 ```python tags=["active-ipynb"]
-!cd .. && 7z a -tzip out/release_v0.1.0.zip \
+!cd .. && 7z a -tzip out/release_v0.1.1.zip \
     md/* py/* out/html/* out/figures/* notebooks/01_preparations.ipynb \
     notebooks/02_yfcc_gridagg_raw.ipynb \
     notebooks/03_yfcc_gridagg_hll.ipynb \
