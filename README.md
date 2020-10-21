@@ -6,9 +6,9 @@
 
 This is the [git repository][static-gh-url] containing the supplementary materials for the paper
 
-    Dunkel, A., Löchner, M., & Burghardt, D. (2020). Privacy-aware visualization
+    **Dunkel, A., Löchner, M., & Burghardt, D. (2020).** _Privacy-aware visualization
     of volunteered geographic information (VGI) to analyze spatial activity: A benchmark
-    implementation. ISPRS International Journal of Geo-Information.
+    implementation._ ISPRS International Journal of Geo-Information. [DOI][DOI-paper] / [PDF][PDF-paper]
 
 The notebooks are stored as markdown files with [jupytext][1] for better git compatibility.
 
@@ -46,3 +46,5 @@ jupytext --set-formats notebooks///ipynb,md///md,py///_/.py --sync md/04_interpr
 [static-gh-url]: https://github.com/Sieboldianus/yfcc_gridagg
 [static-gl-url]: https://gitlab.vgiscience.de/ad/yfcc_gridagg
 [DOI]: http://dx.doi.org/10.25532/OPARA-90
+[DOI-paper]: https://doi.org/10.3390/ijgi9100607
+[PDF-paper]: https://www.mdpi.com/2220-9964/9/10/607/pdf
