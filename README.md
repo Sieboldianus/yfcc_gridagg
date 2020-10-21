@@ -6,9 +6,9 @@
 
 This is the [git repository][static-gh-url] containing the supplementary materials for the paper
 
-    **Dunkel, A., Löchner, M., & Burghardt, D. (2020).** _Privacy-aware visualization
-    of volunteered geographic information (VGI) to analyze spatial activity: A benchmark
-    implementation._ ISPRS International Journal of Geo-Information. [DOI][DOI-paper] / [PDF][PDF-paper]
+> **Dunkel, A., Löchner, M., & Burghardt, D. (2020).** _Privacy-aware visualization
+  of volunteered geographic information (VGI) to analyze spatial activity: A benchmark
+  implementation._ ISPRS International Journal of Geo-Information. [DOI][DOI-paper] / [PDF][PDF-paper]
 
 The notebooks are stored as markdown files with [jupytext][1] for better git compatibility.
 
