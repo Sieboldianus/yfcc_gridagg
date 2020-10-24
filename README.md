@@ -14,6 +14,21 @@ The notebooks are stored as markdown files with [jupytext][1] for better git com
 
 These notebooks can be run with [jupyterlab-docker][2].
 
+
+## Results
+
+In addition to the release file, latest HTML converts of notebooks are available here:
+
+- [01_preparations.html](http://ad.vgiscience.org/yfcc_gridagg/01_preparations.html)
+- [02_yfcc_gridagg_raw.html](http://ad.vgiscience.org/yfcc_gridagg/02_yfcc_gridagg_raw.html)
+- [03_yfcc_gridagg_hll.html](http://ad.vgiscience.org/yfcc_gridagg/03_yfcc_gridagg_hll.html)
+- [04_interpretation.html](http://ad.vgiscience.org/yfcc_gridagg/04_interpretation.html)
+
+There are two additional HTMLs produced in notebooks:
+
+- [yfcc_compare_raw_hll.html](http://ad.vgiscience.org/yfcc_gridagg/yfcc_compare_raw_hll.html) includes all figures and allows to compare raw/HLL through HTML tabs.
+- [yfcc_usercount_est.html](http://ad.vgiscience.org/yfcc_gridagg/yfcc_usercount_est.html) interactive map of worldwide user count, for comparison of raw/HLL per bin.
+
 ## Convert to ipynb files
 
 First, either download release files or convert the markdown files to working jupyter notebooks.

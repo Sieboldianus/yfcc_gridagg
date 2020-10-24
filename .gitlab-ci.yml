@@ -20,6 +20,7 @@ build:
       # quote because * is a
       # special character in YAML
       - '*.svg'
+      - resources/html/
   only:
   - master
 
@@ -28,6 +29,7 @@ pages:
   script:
     - mkdir .public
     - cp *.svg .public
+    - cp resources/html/*.html .public
     - mv .public public
   artifacts:
     name: pages
