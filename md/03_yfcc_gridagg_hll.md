@@ -74,11 +74,9 @@ from modules import tools, preparations
 
 ## Parameters
 
-Parameters from the first notebook are available through import. They can be overridden here.
+All parameters are defined in the first notebook and are available through import. Some values, such as `CHUNK_SIZE`, can be overridden here.
 
 <!-- #raw tags=["active-ipynb"] -->
-GRID_SIZE_METERS = 100000 # the size of grid cells in meters 
-                          # (spatial accuracy of worldwide measurement)
 CHUNK_SIZE = 5000000      # process x number of hll records per chunk.
                           # Increasing this number will consume more memory,
                           # but reduce processing time because less SQL queries

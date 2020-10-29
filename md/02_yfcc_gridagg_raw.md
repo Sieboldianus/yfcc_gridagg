@@ -1340,8 +1340,10 @@ def plot_figure(
     format_legend(leg, bounds, inverse, metric)
     # combine with world geometry
     edgecolor = 'black'
+    ax.set_facecolor('white')
     if inverse:
         edgecolor = 'white'
+        ax.set_facecolor('black')
     world = gp.read_file(
             gp.datasets.get_path('naturalearth_lowres'), crs=CRS_WGS)
     world = world.to_crs(CRS_PROJ)
