@@ -1212,7 +1212,7 @@ def format_legend(
     leg, bounds: List[str], inverse: bool = None,
     metric: str = "postcount"):
     """Formats legend (numbers rounded, colors etc.)"""
-    leg.set_bbox_to_anchor((0., 0.2, 0.2, 0.2))
+    leg.set_bbox_to_anchor((0., 0.2, 0.2, 0.3))
     # get all the legend labels
     legend_labels = leg.get_texts()
     plt.setp(legend_labels, fontsize='12')
