@@ -862,7 +862,7 @@ reset_metrics(grid, ["postcount_est", "usercount_est", "userdays_est"])
 %%time
 %%memit
 load_plot(
-    grid, title=f'Estimated YFCC Post Count per {int(GRID_SIZE_METERS/1000)}km grid',
+    grid, title=f'Estimated YFCC Post Count per {int(GRID_SIZE_METERS/1000)} km grid',
     inverse=False, store_fig="yfcc_postcount_est.png", benchmark_data=True)
 ```
 
@@ -870,7 +870,7 @@ load_plot(
 %%time
 %%memit
 load_plot(
-    grid, title=f'Estimated YFCC User Count per {int(GRID_SIZE_METERS/1000)}km grid',
+    grid, title=f'Estimated YFCC User Count per {int(GRID_SIZE_METERS/1000)} km grid',
     inverse=False, store_fig="yfcc_usercount_est.png",
     metric="usercount_est", benchmark_data=True)
 ```
@@ -879,7 +879,7 @@ load_plot(
 %%time
 %%memit
 load_plot(
-    grid, title=f'Estimated YFCC User Days per {int(GRID_SIZE_METERS/1000)}km grid',
+    grid, title=f'Estimated YFCC User Days per {int(GRID_SIZE_METERS/1000)} km grid',
     inverse=False, store_fig="yfcc_userdays_est.png",
     metric="userdays_est", benchmark_data=True)
 ```
