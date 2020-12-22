@@ -21,6 +21,7 @@ build:
       # special character in YAML
       - '*.svg'
       - resources/html/
+      - 'resources/*.png'
   only:
   - master
 
@@ -30,6 +31,7 @@ pages:
     - mkdir .public
     - cp *.svg .public
     - cp resources/html/*.html .public
+    - cp resources/*.png .public
     - mv .public public
   artifacts:
     name: pages

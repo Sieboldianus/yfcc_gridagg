@@ -2,7 +2,7 @@
 
 # Privacy-aware Flickr YFCC grid aggregation using HyperLogLog
 
-![Cover Figures](https://raw.githubusercontent.com/Sieboldianus/yfcc_gridagg/master/resources/cover_figures.png)
+![Cover Figures](https://ad.vgiscience.org/yfcc_gridagg/cover_figures.png)
 
 This is the [git repository][static-gh-url] containing the supplementary materials for the paper
 
